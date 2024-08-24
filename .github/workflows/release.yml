@@ -18,7 +18,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Release
-          path: ./
+          path: ./photo
       - name: Init git
         run: |
              git config --global user.email "2149656630@qq.com" 
@@ -36,3 +36,4 @@ jobs:
         with:
           tag_name: ${{ env.VERSION }}
           name: Lip-Sese
+          files: ./photo/*
